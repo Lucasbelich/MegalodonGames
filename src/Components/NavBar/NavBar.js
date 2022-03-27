@@ -1,5 +1,5 @@
 import React from "react";
-import { ChakraProvider, Box, Button, Text, Container } from "@chakra-ui/react";
+import { ChakraProvider, Box, Button, Text,  } from "@chakra-ui/react";
 
 const NavBar = () => {
   return (
