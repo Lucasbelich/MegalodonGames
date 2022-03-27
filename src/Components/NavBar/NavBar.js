@@ -5,7 +5,7 @@ const NavBar = () => {
     return (
     <ChakraProvider resetCSS>
       <Box>
-        <Box display="flex" justifyContent="flex-start" alignItems="center">
+        <Box display="flex" justifyContent="flex-start" alignItems="center" backgroundColor="#d2d098">
           <Container display="block" m={10} ml={0} mr={200} width={200}>
             <Text>MEGGames</Text>
           </Container>
@@ -24,4 +24,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBar
