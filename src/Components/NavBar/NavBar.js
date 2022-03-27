@@ -2,20 +2,26 @@ import React from "react";
 import { ChakraProvider, Box, Button, Text, Container } from "@chakra-ui/react";
 
 const NavBar = () => {
-    return (
+  return (
     <ChakraProvider resetCSS>
-      <Box>
-        <Box display="flex" justifyContent="flex-start" alignItems="center" backgroundColor="#d2d098">
-          <Container display="block" m={10} ml={0} mr={200} width={200}>
-            <Text>MEGGames</Text>
-          </Container>
-          <Button variant="solid" size="sm">
+      <Box
+        display="flex"
+        justifyContent="space-around"
+        alignItems="center"
+        backgroundColor="#d2d098"
+        padding={5}
+      >
+        <Box textAlign="center">
+          <Text>MEGGames</Text>
+        </Box>
+        <Box>
+          <Button variant="solid" size="md">
             PS4
           </Button>
-          <Button variant="solid" size="sm" ml={10} mr={10}>
+          <Button variant="solid" size="md" ml={5} mr={5}>
             PS5
           </Button>
-          <Button variant="solid" size="sm">
+          <Button variant="solid" size="md">
             XBOX
           </Button>
         </Box>
@@ -24,4 +30,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar
+export default NavBar;
