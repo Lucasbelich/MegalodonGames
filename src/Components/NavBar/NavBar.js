@@ -1,5 +1,6 @@
 import React from "react";
-import { ChakraProvider, Box, Button, Text,  } from "@chakra-ui/react";
+import { ChakraProvider, Box, Button, Text } from "@chakra-ui/react";
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
   return (
@@ -11,8 +12,10 @@ const NavBar = () => {
         backgroundColor="#d2d098"
         padding={5}
       >
-        <Box textAlign="center">
-          <Text>MEGGames</Text>
+        <Box>
+          <Text fontWeight="bold" textAlign="center">
+            MEGGames
+          </Text>
         </Box>
         <Box>
           <Button variant="solid" size="md">
@@ -24,6 +27,9 @@ const NavBar = () => {
           <Button variant="solid" size="md">
             XBOX
           </Button>
+        </Box>
+        <Box>
+          <CartWidget />
         </Box>
       </Box>
     </ChakraProvider>
