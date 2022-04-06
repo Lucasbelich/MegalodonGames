@@ -1,36 +1,24 @@
-import { ChakraProvider, Box, Button, Text } from "@chakra-ui/react";
+import Counter from "../Counter/Counter";
+import { useState } from "react";
 
-const ItemCount = ({ stock, initial, onAdd, count }) => {
+const ItemCount = () => {
+  const [count, setCount] = useState(1);
+
+  const onAdd = (e) => {
+    if (e === "-") {
+      setCount(count - 1);
+    }
+    if (e === "+") {
+      setCount(count + 1);
+    }
+  };
+  const stock = 5;
+  const initial = 1;
+
   return (
-    <ChakraProvider resetCSS>
-      <Box display="flex" justifyContent="center" alignItems="center" mt={10}>
-        <Button
-          variant="solid"
-          size="md"
-          onClick={() => {
-            if (count > initial) {
-              onAdd("-");
-            }
-          }}
-        >
-          -
-        </Button>
-        <Text ml={10} mr={10}>
-          {count}
-        </Text>
-        <Button
-          variant="solid"
-          size="md"
-          onClick={() => {
-            if (count < stock) {
-              onAdd("+");
-            }
-          }}
-        >
-          +
-        </Button>
-      </Box>
-    </ChakraProvider>
+    <div>
+      <Counter onAdd={onAdd} stock={stock} initial={initial} count={count} />
+    </div>
   );
 };
 
